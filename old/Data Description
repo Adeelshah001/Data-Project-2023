@@ -1,0 +1,69 @@
+#Coding in Python#
+#Profile Report and Summary Statistics in Python
+import pandas as pd
+import pandas_profiling as pp
+dataset = pd.read_excel('Video_Games.xlsx')
+profile = pp.ProfileReport(dataset)
+profile.to_file("profile_report.html")
+profile
+
+#Coding in R#
+#Creating Figure 1: Plot of NA Video Game Sales
+plot(Video_Games$NA_Sales, main = "North American Video Game Sales", xlab = "Observations", ylab = "NA Unit Sales (Millions)")
+
+#Creating Figure 2: Barplot of Top 10 Platforms
+platform_sorted <- Platform_data.frame[order(Platform_data.frame$Freq, decreasing = TRUE), ]
+barplot(head(platform_sorted$Freq, 10), names.arg = head(platform_sorted$Platform, 10), xlab = "Top 10 Platforms", ylab = "# of Games on Platform")
+
+#Creating Figure 4: Top Publishers by Global Sales
+publisher_sales <- aggregate(Global_Sales ~ Publisher, data = Video_Games, FUN = sum)
+head(publisher_sales[order(publisher_sales$Global_Sales, decreasing = TRUE), ])
+
+#Creating Methodology Diagram
+library(DiagrammeR)
+code <- "
+digraph flowchart {
+  # Define the nodes
+  node [shape = box] Start Data_Collection Data_Preprocessing Exploratory_Data_Analysis
+  node [shape = box] Correlation_Analysis Predictive_Modeling Evaluation End
+
+  # Define the edges
+  Start -> Data_Collection
+  Data_Collection -> Data_Preprocessing
+  Data_Preprocessing -> Exploratory_Data_Analysis
+  Exploratory_Data_Analysis -> Correlation_Analysis
+  Correlation_Analysis -> Predictive_Modeling
+  Predictive_Modeling -> Evaluation
+  Evaluation -> End
+}"
+graph <- grViz(code)
+graph
+
+#Loading in the dataset and viewing the summary statistics in R
+install.packages("dplyr")
+library(dplyr)
+library(readxl)
+Video_Games <- read_excel("Video_Games.xlsx")
+View(Video_Games)
+head(Video_Games)
+tail(Video_Games)
+str(Video_Games)
+summary(Video_Games)
+summary(Video_Games$Global_Sales)
+mean_sales <- mean(Video_Games$Global_Sales)
+median_sales <- median(Video_Games$Global_Sales)
+max_sales <- max(Video_Games$Global_Sales)
+min_sales <- min(Video_Games$Global_Sales)
+variance_sales <- var(Video_Games$Global_Sales)
+sd_sales <- sd(Video_Games$Global_Sales)
+cat("Mean Sales: ", mean_sales, "\n")
+cat("Median Sales: ", median_sales, "\n")
+cat("Maximum Sales: ", max_sales, "\n")
+cat("Minimum Sales: ", min_sales, "\n")
+cat("Variance of Sales: ", variance_sales, "\n")
+cat("Standard Deviation of Sales: ", sd_sales, "\n")
+#Viewing min/max observations.
+max_sales_observation <- Video_Games[Video_Games$Global_Sales == max_sales, ]
+print(max_sales_observation)
+min_sales_observation <- Video_Games[Video_Games$Global_Sales == min_sales, ]
+print(min_sales_observation)

@@ -1,0 +1,32 @@
+Package: VideoGameSalesAnalysis
+Title: Video Game Sales Analysis - CIND 820 Big Data Analytics Project
+Version: 1.0.0
+Authors@R: person("Adeel", "Shah", email = "adeelshah001@github.com", role = c("aut", "cre"))
+Description: Analysis of video game sales data using exploratory data analysis and predictive modeling (Linear Regression, Random Forest, SVR, XGBoost).
+License: MIT
+Encoding: UTF-8
+RoxygenNote: 7.2.0
+
+Depends:
+    R (>= 4.0.0)
+
+Imports:
+    dplyr (>= 1.0.0),
+    tidyr (>= 1.2.0),
+    ggplot2 (>= 3.3.0),
+    reshape2,
+    caret (>= 6.0.0),
+    randomForest (>= 4.6.0),
+    e1071 (>= 1.7.0),
+    xgboost (>= 1.5.0),
+    DiagrammeR (>= 1.0.0),
+    rpart (>= 4.1.0),
+    rpart.plot (>= 3.1.0)
+
+Suggests:
+    knitr (>= 1.39),
+    rmarkdown (>= 2.14),
+    testthat (>= 3.0.0)
+
+URL: https://github.com/Adeelshah001/Data-Project
+BugReports: https://github.com/Adeelshah001/Data-Project/issues

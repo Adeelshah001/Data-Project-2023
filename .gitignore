@@ -1,0 +1,68 @@
+# Data files (large, not tracked)
+data/*.xlsx
+data/*.csv
+data/*.xls
+*.xlsx
+
+# Output files
+outputs/figures/*.png
+outputs/figures/*.jpg
+outputs/figures/*.pdf
+outputs/models/*.rds
+outputs/models/*.pkl
+outputs/models/*.joblib
+outputs/reports/*.html
+outputs/reports/*.txt
+outputs/reports/*.csv
+
+# R specific
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+conda-env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+
+# Profiling reports
+profile_report.html
+*.prof
+# Generated plots and executed notebooks
+Rplots.pdf
+notebooks/*_executed.ipynb

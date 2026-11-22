@@ -1,0 +1,42 @@
+name: videogames-sales-analysis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Core
+  - python=3.9
+  - pip
+  - r-base=4.2
+  - r-essentials
+
+  # Python packages
+  - pandas=1.5
+  - numpy=1.21
+  - scipy=1.9
+  - matplotlib=3.5
+  - seaborn=0.11
+  - scikit-learn=1.1
+  - xgboost=1.6
+  - jupyter=1.0
+  - jupyterlab=3.4
+  - pip=22.3
+
+  # R packages (installed via conda)
+  - r-dplyr=1.0
+  - r-tidyr=1.2
+  - r-ggplot2=3.3
+  - r-reshape2
+  - r-caret=6.0
+  - r-randomforest=4.6
+  - r-e1071=1.7
+  - r-xgboost=1.5
+  - r-diagrammer=1.0
+  - r-rpart=4.1
+  - r-rpart.plot=3.1
+
+  # Python packages via pip
+  - pip:
+    - pandas-profiling==3.2.0
+    - plotly==5.10.0
+    - tqdm==4.64.0
+    - joblib==1.2.0
