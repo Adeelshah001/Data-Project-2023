@@ -1,0 +1,72 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘xgboost’
+
+The following object is masked from ‘package:dplyr’:
+
+    slice
+
+Loading required package: ggplot2
+Loading required package: lattice
+Cross-Validated XGBoost:
+eXtreme Gradient Boosting 
+
+16719 samples
+    4 predictor
+
+No pre-processing
+Resampling: Cross-Validated (3 fold) 
+Summary of sample sizes: 11146, 11146, 11146 
+Resampling results across tuning parameters:
+
+  eta  max_depth  nrounds  RMSE      Rsquared   MAE      
+  0.1  3           50      1.364693  0.2103435  0.5206740
+  0.1  3          100      1.341287  0.2323845  0.5003821
+  0.1  6           50      1.328582  0.2303732  0.4915123
+  0.1  6          100      1.313523  0.2485256  0.4720343
+  0.3  3           50      1.328043  0.2457438  0.4857310
+  0.3  3          100      1.311660  0.2633321  0.4673386
+  0.3  6           50      1.310656  0.2537674  0.4606263
+  0.3  6          100      1.305167  0.2631694  0.4490544
+
+Tuning parameter 'gamma' was held constant at a value of 0
+Tuning
+
+Tuning parameter 'min_child_weight' was held constant at a value of 1
+
+Tuning parameter 'subsample' was held constant at a value of 1
+RMSE was used to select the optimal model using the smallest value.
+The final values used for the model were nrounds = 100, max_depth = 6, eta
+ = 0.3, gamma = 0, colsample_bytree = 1, min_child_weight = 1 and subsample = 1.
+  eta max_depth gamma colsample_bytree min_child_weight subsample nrounds
+1 0.1         3     0                1                1         1      50
+5 0.3         3     0                1                1         1      50
+3 0.1         6     0                1                1         1      50
+7 0.3         6     0                1                1         1      50
+2 0.1         3     0                1                1         1     100
+6 0.3         3     0                1                1         1     100
+4 0.1         6     0                1                1         1     100
+8 0.3         6     0                1                1         1     100
+      RMSE  Rsquared       MAE    RMSESD RsquaredSD      MAESD
+1 1.364693 0.2103435 0.5206740 0.2813346 0.08718443 0.01630126
+5 1.328043 0.2457438 0.4857310 0.2831586 0.06094930 0.02021507
+3 1.328582 0.2303732 0.4915123 0.2515782 0.07487319 0.01800463
+7 1.310656 0.2537674 0.4606263 0.2644179 0.04520825 0.02025893
+2 1.341287 0.2323845 0.5003821 0.2829324 0.06686427 0.01790066
+6 1.311660 0.2633321 0.4673386 0.2806581 0.04702103 0.01934667
+4 1.313523 0.2485256 0.4720343 0.2533687 0.06220313 0.01855150
+8 1.305167 0.2631694 0.4490544 0.2652631 0.03934313 0.01851435
+  nrounds max_depth eta gamma colsample_bytree min_child_weight subsample
+1     100         6 0.3     0                1                1         1
+      RMSE  Rsquared       MAE    RMSESD RsquaredSD      MAESD
+1 1.305167 0.2631694 0.4490544 0.2652631 0.03934313 0.01851435

@@ -1,0 +1,97 @@
+Loading required package: ggplot2
+Loading required package: lattice
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Dataset dimensions: 16719 16 
+Column names: Name Platform Year_of_Release Genre Publisher NA_Sales EU_Sales JP_Sales Other_Sales Global_Sales Critic_Score Critic_Count User_Score User_Count Developer Rating 
+'data.frame':	16719 obs. of  16 variables:
+ $ Name           : chr  "Wii Sports" "Super Mario Bros." "Mario Kart Wii" "Wii Sports Resort" ...
+ $ Platform       : chr  "Wii" "NES" "Wii" "Wii" ...
+ $ Year_of_Release: chr  "2006" "1985" "2008" "2009" ...
+ $ Genre          : chr  "Sports" "Platform" "Racing" "Sports" ...
+ $ Publisher      : chr  "Nintendo" "Nintendo" "Nintendo" "Nintendo" ...
+ $ NA_Sales       : num  41.4 29.1 15.7 15.6 11.3 ...
+ $ EU_Sales       : num  28.96 3.58 12.76 10.93 8.89 ...
+ $ JP_Sales       : num  3.77 6.81 3.79 3.28 10.22 ...
+ $ Other_Sales    : num  8.45 0.77 3.29 2.95 1 0.58 2.88 2.84 2.24 0.47 ...
+ $ Global_Sales   : num  82.5 40.2 35.5 32.8 31.4 ...
+ $ Critic_Score   : int  76 NA 82 80 NA NA 89 58 87 NA ...
+ $ Critic_Count   : int  51 NA 73 73 NA NA 65 41 80 NA ...
+ $ User_Score     : chr  "8" "" "8.3" "8" ...
+ $ User_Count     : int  322 NA 709 192 NA NA 431 129 594 NA ...
+ $ Developer      : chr  "Nintendo" "" "Nintendo" "Nintendo" ...
+ $ Rating         : chr  "E" "" "E" "E" ...
+XGBoost Results:
+MSE: 33.3427 
+RMSE: 5.774314 
+MAE: 2.593566 
+R-squared: 0.214745 
+                                       Feature       Gain        Cover
+                                        <char>      <num>        <num>
+ 1:                          PublisherNintendo 0.15195969 0.0166281888
+ 2:                                 PlatformGB 0.08674717 0.0067797748
+ 3:                               GenreShooter 0.07660891 0.0070147175
+ 4:                              GenrePlatform 0.06373132 0.0026874567
+ 5:                                PlatformNES 0.05110844 0.0175511779
+ 6:                 DeveloperPolyphony Digital 0.04045646 0.0179203736
+ 7:                                GenreSports 0.03783887 0.0046772774
+ 8:                          DeveloperNintendo 0.03507311 0.0170069740
+ 9:                          GenreRole-Playing 0.03312792 0.0103590548
+10: DeveloperInfinity Ward, Sledgehammer Games 0.02999168 0.0194307195
+11:                            GenreSimulation 0.02642270 0.0124663469
+12:                                PlatformWii 0.02570818 0.0016565857
+13:                                 PlatformDS 0.02409675 0.0085778056
+14:                                  Developer 0.02245928 0.0064201686
+15:                    DeveloperRockstar North 0.02147540 0.0206749568
+16:                               PlatformX360 0.01996262 0.0006688675
+17:                                  GenreMisc 0.01895315 0.0051471628
+18:            PublisherMicrosoft Game Studios 0.01694354 0.0103878233
+19:                     DeveloperInfinity Ward 0.01376103 0.0122194173
+20:                          DeveloperTreyarch 0.01318663 0.0143075304
+                                       Feature       Gain        Cover
+                                        <char>      <num>        <num>
+     Frequency
+         <num>
+ 1: 0.01432182
+ 2: 0.01516428
+ 3: 0.01769166
+ 4: 0.01937658
+ 5: 0.01684920
+ 6: 0.01095198
+ 7: 0.01937658
+ 8: 0.01432182
+ 9: 0.01684920
+10: 0.01095198
+11: 0.01684920
+12: 0.01600674
+13: 0.02021904
+14: 0.02190396
+15: 0.01179444
+16: 0.03369840
+17: 0.01937658
+18: 0.01010952
+19: 0.00673968
+20: 0.00842460
+     Frequency
+         <num>
+Something is wrong; all the RMSE metric values are missing:
+      RMSE        Rsquared        MAE     
+ Min.   : NA   Min.   : NA   Min.   : NA  
+ 1st Qu.: NA   1st Qu.: NA   1st Qu.: NA  
+ Median : NA   Median : NA   Median : NA  
+ Mean   :NaN   Mean   :NaN   Mean   :NaN  
+ 3rd Qu.: NA   3rd Qu.: NA   3rd Qu.: NA  
+ Max.   : NA   Max.   : NA   Max.   : NA  
+ NA's   :8     NA's   :8     NA's   :8    
+Error: Stopping
+In addition: There were 41 warnings (use warnings() to see them)
+Execution halted

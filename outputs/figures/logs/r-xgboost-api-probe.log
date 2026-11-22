@@ -1,0 +1,109 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: ggplot2
+Loading required package: lattice
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold1: eta=0.1, max_depth=3, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold1: eta=0.1, max_depth=6, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold1: eta=0.3, max_depth=3, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold1: eta=0.3, max_depth=6, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold2: eta=0.1, max_depth=3, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold2: eta=0.1, max_depth=6, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold2: eta=0.3, max_depth=3, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold2: eta=0.3, max_depth=6, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold3: eta=0.1, max_depth=3, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold3: eta=0.1, max_depth=6, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold3: eta=0.3, max_depth=3, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in check.deprecation(deprecated_train_params, match.call(), ...) :
+  Passed invalid function arguments: verbosity. These should be passed as a list to argument 'params'. Conversion from argument to 'params' entry will be done automatically, but this behavior will become an error in a future version.
+Warning in check.custom.obj(params, objective) :
+  Argument 'objective' is only for custom objectives. For built-in objectives, pass the objective under 'params'. This warning will become an error in a future version.
+Warning: model fit failed for Fold3: eta=0.3, max_depth=6, gamma=0, colsample_bytree=1, min_child_weight=1, subsample=1, nrounds=100 Error in modelFit$xNames <- colnames(x) : 
+  ALTLIST classes must provide a Set_elt method [class: XGBAltrepPointerClass, pkg: xgboost]
+
+Warning in nominalTrainWorkflow(x = x, y = y, wts = weights, info = trainInfo,  :
+  There were missing values in resampled performance measures.
+Something is wrong; all the RMSE metric values are missing:
+      RMSE        Rsquared        MAE     
+ Min.   : NA   Min.   : NA   Min.   : NA  
+ 1st Qu.: NA   1st Qu.: NA   1st Qu.: NA  
+ Median : NA   Median : NA   Median : NA  
+ Mean   :NaN   Mean   :NaN   Mean   :NaN  
+ 3rd Qu.: NA   3rd Qu.: NA   3rd Qu.: NA  
+ Max.   : NA   Max.   : NA   Max.   : NA  
+ NA's   :8     NA's   :8     NA's   :8    
+Error : Stopping

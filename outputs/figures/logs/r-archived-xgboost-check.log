@@ -1,0 +1,8 @@
+Loading required package: ggplot2
+Loading required package: lattice
+   nrounds max_depth eta gamma colsample_bytree min_child_weight subsample
+40      50         3 0.3     0              0.6                1      0.75
+  nrounds max_depth eta gamma colsample_bytree min_child_weight subsample
+1      50         3 0.3     0              0.6                1      0.75
+      RMSE  Rsquared      MAE    RMSESD RsquaredSD      MAESD
+1 2.766348 0.3507031 1.563478 0.2015314  0.1193506 0.08503104

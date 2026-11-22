@@ -1,0 +1,22 @@
+diff --git a/README.md b/README.md
+index 0597b9d..4680f96 100644
+--- a/README.md
++++ b/README.md
+@@ -41,7 +41,7 @@ The report gives XGBoost an initial R² of 0.084. After hyperparameter tuning, c
+ 
+ ## 🚀 Quick Start
+ 
+-The Windows R workflow uses PowerShell and R. Download `Video_Games.csv` from [Kaggle](https://www.kaggle.com/datasets/ibrahimmuhammadnaeem/video-games-sales-dataset-updated-extra-feat) and place it at `data/Video_Games.csv` inside the clone.
++The Windows R workflow uses PowerShell and R. Download `Video_Games.csv` from [the Kaggle dataset, version 1](https://www.kaggle.com/datasets/ibriiee/video-games-sales-dataset-2022-updated-extra-feat/versions/1) and place it at `data/Video_Games.csv` inside the clone.
+ 
+ ```powershell
+ git clone https://github.com/Adeelshah001/Data-Project-2023.git
+@@ -158,7 +158,7 @@ The Python notebooks define the following visualizations for `outputs/figures/`:
+ 
+ ## 📚 References
+ 
+-- **Dataset**: Ibrahim Muhammad Naeem. (2023). *Video Game Sales Dataset Updated -Extra Feat* [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/4984906
++- **Dataset**: Ibrahim Muhammad Naeem. (2023). *Video Game Sales Dataset Updated -Extra Feat* [Data set]. [Kaggle, version 1](https://www.kaggle.com/datasets/ibriiee/video-games-sales-dataset-2022-updated-extra-feat/versions/1) · [Dataset DOI](https://doi.org/10.34740/KAGGLE/DSV/4984906)
+ - Cox, J. (2014). What Makes a Blockbuster Video Game? *Manage. Decis. Econ.*, 35: 189-198.
+ - Babb, J., Terry, N., & Dana, K. (2013). The Impact Of Platform On Global Video Game Sales. *IBER*, 12(10), 1273.
+ - Ruohonen, J., & Hyrynsalmi, S. (2017). Evaluating the use of internet search volumes for time series modeling of sales in the video game industry. *Electron Markets*, 27, 351–370.

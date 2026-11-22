@@ -1,0 +1,67 @@
+Video Game Sales Analysis
+Verification run for Data-Project-2023, commit 1243b07
+
+Dataset
+Kaggle version 1, resolved via DOI 10.34740/KAGGLE/DSV/4984906
+https://www.kaggle.com/datasets/ibriiee/video-games-sales-dataset-2022-updated-extra-feat/versions/1
+Downloaded archive member Video_Games.csv with 16,719 rows and 16 columns.
+CSV SHA-256 4ad802a9e51792e7a96b84da4501e5f64c97484d937ede9441d2e1145c1d7b03
+
+Python
+All three notebooks executed. The execution copies use paths relative to the
+notebooks directory, ydata-profiling, and aligned yearly totals for the stacked
+genre chart. The modeling copy exports test predictions for verification.
+Model algorithms, feature selection, hyperparameters, sample, and split were
+preserved. The notebooks in this bundle contain the executed cells. To rerun
+them, place them in the clone's notebooks directory and create outputs/figures
+and outputs/reports before execution.
+
+Python 3.12.14, pandas 2.3.3, NumPy 2.3.5, SciPy 1.16.3, Matplotlib 3.10.0,
+seaborn 0.13.2, scikit-learn 1.8.0, xgboost-cpu 3.2.0, nbconvert 7.17.2,
+ipykernel 7.4.0, ydata-profiling 4.18.4, setuptools 80.10.2, ipywidgets 8.1.9.
+
+The modeling notebook sampled 5,000 complete rows and used 3,500 for training
+and 1,500 for testing. The split is by row, with 451 named titles appearing in
+both sets. The test results measure performance on held-out platform records.
+The training-mean baseline predicts the mean training sales for every row.
+The script verify_results.py matched test rows to the source CSV and
+recalculated the hold-out metrics from the saved predictions. Its input is the
+downloaded CSV path. It uses pandas and NumPy and writes its output to reports/.
+
+The current notebook uses fixed XGBoost hyperparameters. The historical report
+gives the result of a tuned R cross-validation. Its archived recipe uses the
+first 1,000 complete observations after dropping row 1, a different caret
+tuning setup, and no recorded seed for that section.
+
+In the Python test set, two Wii records received XGBoost predictions of
+58.93 million units each. The observed sales were 3.25 million for Wii Music
+and 3.95 million for The Legend of Zelda: Skyward Sword. Together these two
+records contributed approximately 77% of XGBoost's test squared error.
+
+Historical XGBoost verification
+The report lists 3-fold CV RMSE 2.886894, R-squared 0.3376801, and
+MAE 1.604984. The archived recipe rerun used the DOI-linked CSV in
+place of the original Excel file, treated empty strings as missing,
+used seed 42 for its folds, and ran with XGBoost 1.7.6.1.
+It produced RMSE 2.766348, caret R-squared 0.3507031, and MAE 1.563478.
+
+Current R scripts on Linux
+The R scripts ran directly in the directories used by the Windows launcher.
+Preprocessing and exploratory analysis completed and the exploratory PDF has
+12 pages. The evaluation entry point loaded its comparison functions.
+The linear regression, random forest, and SVR scripts printed hold-out
+metrics. The linear regression and random forest cross-validation did not
+finish within the four-minute stage limits. The R random forest's printed
+R-squared uses deviations of the predictions from the test mean in its
+numerator. The R SVR outputs test errors on the scaled target.
+With R 4.5.3 and XGBoost 3.4.2, the current XGBoost script produced hold-out
+results, then caret failed during cross-validation when it tried to attach
+metadata to the fitted XGBoost object. The failure is captured in the logs.
+The SVR cross-validation also exceeded the runtime budget after printing
+test metrics. Status 124 in r-stage-status.tsv marks a run ended at the
+runtime limit.
+
+A separate CV run of the current XGBoost tuning grid completed with R 4.3.3,
+caret 6.0.94, and XGBoost 1.7.6.1. That check set seed 123 and explicitly
+selected histogram tree construction. At the minimum CV RMSE, the metrics
+were RMSE 1.305167, caret R-squared 0.2631694, and MAE 0.4490544.
