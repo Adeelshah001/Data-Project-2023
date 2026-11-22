@@ -15,12 +15,12 @@ This project analyzes video game sales data to identify key factors influencing 
 
 | Aspect | Details |
 |--------|---------|
-| **Dataset** | 16,000+ games, 16 features |
-| **Target Variables** | NA_Sales, EU_Sales, JP_Sales, Other_Sales, Global_Sales |
+| **Dataset** | 16,719 rows and 16 columns |
+| **Prediction target** | Global sales. Regional sales are explored in the descriptive analysis. |
 | **Key Features** | Genre, Platform, Publisher, Developer, Year, Critic/User Scores |
 | **Methods** | EDA, Correlation Analysis, ANOVA, Predictive Modeling |
 | **Models** | Linear Regression, Random Forest, SVR, XGBoost |
-| **Best Model** | **XGBoost** (original test R² ≈ 0.34) |
+| **Final report result** | Tuned XGBoost reached a cross-validated R² of 0.338. |
 
 ---
 
@@ -32,26 +32,20 @@ This project analyzes video game sales data to identify key factors influencing 
 - **Dominant genre**: Action (globally), but **Role-Playing dominates in Japan**
 - **Multi-platform games** generate ~30% more sales than exclusives
 
-### 🤖 Model Performance in the Original Analysis
+## Final report and slides
 
-| Model | Test RMSE | Test R² | Test MAE | CV R² |
-|-------|-----------|---------|----------|-------|
-| **XGBoost** | **2.68** | **0.34** | **1.72** | **0.34** |
-| Random Forest | 2.73 | 0.24 | 1.49 | 0.37 |
-| Linear Regression | 2.37 | 0.11 | 1.09 | 0.22 |
-| SVR | 1.10 | 0.13 | 1.62 | 0.08 |
+- [Final project report (Word)](Exploring%20the%20Dynamics%20of%20Video%20Game%20Sales%20Project%20Report.docx)
+- [Final presentation (PowerPoint)](Final%20Project%20Presentation.pptx)
 
-> **Note**: Metrics vary by train/test split. XGBoost had the highest test R² in the original analysis.
-
----
+The report gives XGBoost an initial R² of 0.084. After hyperparameter tuning, cross-validation yielded R² 0.338, RMSE 2.887, and MAE 1.605. These are results from the original analysis.
 
 ## 🚀 Quick Start
 
 The Windows R workflow uses PowerShell and R. Download `Video_Games.csv` from [Kaggle](https://www.kaggle.com/datasets/ibrahimmuhammadnaeem/video-games-sales-dataset-updated-extra-feat) and place it at `data/Video_Games.csv` inside the clone.
 
 ```powershell
-git clone https://github.com/Adeelshah001/Data-Project.git
-Set-Location Data-Project
+git clone https://github.com/Adeelshah001/Data-Project-2023.git
+Set-Location Data-Project-2023
 
 # After placing the CSV, install R packages once in your personal R library.
 .\run_analysis.ps1 -Language R -SetupOnly
@@ -65,7 +59,7 @@ The launcher stops at the first failed R stage and identifies the script. The ev
 ## 📁 Project Structure
 
 ```
-Data-Project/
+Data-Project-2023/
 ├── 📂 data/                    # Raw data (not tracked)
 │   └── Video_Games.csv         # Place dataset here
 ├── 📂 docs/                    # Documentation
@@ -150,7 +144,7 @@ The Python notebooks define the following visualizations for `outputs/figures/`:
 ```
 
 ### Feature Engineering
-- **Multi-platform indicator**: Games released on >1 platform
+- **Multi-platform indicator**: Repeated nonblank game titles in the dataset
 - **One-hot encoding**: Genre, Platform, Publisher, Developer
 - **Score conversion**: User_Score & Critic_Score to numeric
 
@@ -158,7 +152,7 @@ The Python notebooks define the following visualizations for `outputs/figures/`:
 1. **Linear Regression** — Baseline, interpretable
 2. **Random Forest** — Non-linear, feature importance
 3. **SVR (RBF Kernel)** — Non-linear regression
-4. **XGBoost** — Gradient boosting, best performance
+4. **XGBoost** — Gradient boosting with hyperparameter tuning
 
 ---
 

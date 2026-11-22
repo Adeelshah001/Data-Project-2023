@@ -4,7 +4,7 @@
 .PHONY: all clean setup data eda models evaluation report
 
 # Default target
-all: setup data eda models evaluation report
+all: setup data eda models evaluation
 
 # Setup environment
 setup:
@@ -18,7 +18,7 @@ setup-py:
 
 # Install R dependencies only
 setup-r:
-	R -e "install.packages(c('readxl', 'dplyr', 'tidyr', 'ggplot2', 'caret', 'randomForest', 'e1071', 'xgboost', 'DiagrammeR', 'reshape2', 'rpart', 'rpart.plot'), repos='https://cloud.r-project.org/')"
+	R -e "install.packages(c('dplyr', 'tidyr', 'ggplot2', 'caret', 'randomForest', 'e1071', 'xgboost', 'DiagrammeR', 'reshape2', 'rpart', 'rpart.plot'), repos='https://cloud.r-project.org/')"
 
 # Download/prepare data (placeholder - user must provide Video_Games.csv)
 data:
@@ -57,11 +57,10 @@ evaluation: models
 	@echo "Running model evaluation..."
 	cd src/evaluation && Rscript model_comparison.R
 
-# Generate final report
-report: evaluation
-	@echo "Generating final report..."
-	Rscript -e "rmarkdown::render('docs/report.Rmd', output_file='../outputs/reports/final_report.html')" || true
-	@echo "Report generation complete. Check outputs/reports/"
+# Locate the published report
+report:
+	@test -f "Exploring the Dynamics of Video Game Sales Project Report.docx"
+	@echo "Exploring the Dynamics of Video Game Sales Project Report.docx"
 
 # Run Python profiling
 profile: data
@@ -87,7 +86,7 @@ clean-all: clean
 # Help
 help:
 	@echo "Available targets:"
-	@echo "  all         - Run complete pipeline (default)"
+	@echo "  all         - Run R analysis (default)"
 	@echo "  setup       - Create conda environment"
 	@echo "  setup-py    - Install Python dependencies only"
 	@echo "  setup-r     - Install R dependencies only"
@@ -98,7 +97,7 @@ help:
 	@echo "  models-py   - Train all models (Python notebook)"
 	@echo "  profile     - Generate data profile report"
 	@echo "  evaluation  - Run model evaluation"
-	@echo "  report      - Generate final report"
+	@echo "  report      - Locate the published report"
 	@echo "  clean       - Remove generated outputs"
 	@echo "  clean-all   - Remove outputs and conda environment"
 	@echo "  help        - Show this help"

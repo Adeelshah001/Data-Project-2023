@@ -12,8 +12,8 @@ This project analyzes video game sales data to identify key factors influencing 
 
 ```bash
 # Fork the repository on GitHub, then clone your fork
-git clone https://github.com/YOUR_USERNAME/Data-Project.git
-cd Data-Project
+git clone https://github.com/YOUR_USERNAME/Data-Project-2023.git
+cd Data-Project-2023
 ```
 
 ### 2. Set Up Development Environment
@@ -29,8 +29,8 @@ conda activate videogames-sales-analysis
 # Python
 pip install -r requirements.txt
 
-# R (install packages from DESCRIPTION)
-R -e "install.packages(c('readxl', 'dplyr', 'tidyr', 'ggplot2', 'caret', 'randomForest', 'e1071', 'xgboost', 'DiagrammeR', 'rpart', 'rpart.plot'))"
+# R packages
+R -e "install.packages(c('dplyr', 'tidyr', 'ggplot2', 'reshape2', 'caret', 'randomForest', 'e1071', 'xgboost', 'DiagrammeR', 'rpart', 'rpart.plot'))"
 ```
 
 ### 3. Make Changes
@@ -102,7 +102,7 @@ When reporting issues, please include:
 ## Project Structure
 
 ```
-Data-Project/
+Data-Project-2023/
 ├── data/                 # Raw data (not tracked)
 ├── docs/                 # Dataset documentation
 ├── notebooks/            # Jupyter notebooks (Python)
@@ -133,4 +133,4 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 ## Questions?
 
-Open an issue on GitHub for any questions about contributing.
+Open an issue to ask about contributing. [GitHub issues](https://github.com/Adeelshah001/Data-Project-2023/issues)
