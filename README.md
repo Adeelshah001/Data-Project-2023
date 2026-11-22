@@ -69,10 +69,12 @@ Data-Project-2023/
 │   ├── 01_data_profiling.ipynb       # Pandas profiling report
 │   ├── 02_exploratory_analysis.ipynb # EDA visualizations
 │   └── 03_modeling.ipynb             # All 4 models + comparison
-├── 📂 outputs/                 # Generated outputs (not tracked)
-│   ├── 📂 figures/             # Visualizations (PNG)
-│   ├── 📂 models/              # Trained models
-│   └── 📂 reports/             # Analysis reports
+├── 📂 outputs/                 # Verification outputs
+│   ├── 📄 README.md            # Output index
+│   └── 📂 figures/             # PNG charts, R plots PDF, and run results
+│       ├── 📂 logs/
+│       ├── 📂 notebooks/
+│       └── 📂 reports/
 ├── 📂 src/                     # Source Code (R)
 │   ├── 📂 data/
 │   │   └── data_preprocessing.R
@@ -104,25 +106,26 @@ The [notebooks](notebooks/) contain the Python profiling, exploratory analysis, 
 
 ## 📊 Visualizations
 
-The Python notebooks define the following visualizations for `outputs/figures/`:
+Open a figure below or browse the [figures folder](outputs/figures/).
 
 | Figure | Description |
 |--------|-------------|
-| `sales_distributions.png` | Regional sales histograms |
-| `top_platforms.png` | Top 10 platforms by game count |
-| `top_publishers.png` | Top 10 publishers by global sales |
-| `sales_by_year.png` | Global sales trend (1996-2016) |
-| `sales_by_scores.png` | Sales by critic & user scores |
-| `genre_distribution.png` | Genre frequency pie chart |
-| `genre_regional_sales.png` | Regional sales by genre (faceted) |
-| `multiplatform_sales.png` | Multi-platform vs single-platform |
-| `sales_correlation.png` | Regional sales correlation heatmap |
-| `genre_sales_by_year.png` | Stacked genre sales over time |
-| `rf_feature_importance.png` | Random Forest top features |
-| `xgb_feature_importance.png` | XGBoost top features |
-| `model_comparison.png` | Model performance comparison |
-| `predicted_vs_actual.png` | Predicted vs actual scatter plots |
-| `residual_plots.png` | Residual analysis for all models |
+| [sales_distributions.png](outputs/figures/sales_distributions.png) | Regional sales histograms |
+| [top_platforms.png](outputs/figures/top_platforms.png) | Top 10 platforms by game count |
+| [top_publishers.png](outputs/figures/top_publishers.png) | Top 10 publishers by global sales |
+| [sales_by_year.png](outputs/figures/sales_by_year.png) | Global sales by release year (1996–2016) |
+| [sales_by_scores.png](outputs/figures/sales_by_scores.png) | Sales by critic & user scores |
+| [genre_distribution.png](outputs/figures/genre_distribution.png) | Genre frequency pie chart |
+| [genre_regional_sales.png](outputs/figures/genre_regional_sales.png) | Regional sales by genre |
+| [multiplatform_sales.png](outputs/figures/multiplatform_sales.png) | Multi-platform vs single-platform |
+| [sales_correlation.png](outputs/figures/sales_correlation.png) | Regional sales correlation heatmap |
+| [genre_sales_by_year.png](outputs/figures/genre_sales_by_year.png) | Stacked genre sales over time |
+| [rf_feature_importance.png](outputs/figures/rf_feature_importance.png) | Random Forest top features |
+| [xgb_feature_importance.png](outputs/figures/xgb_feature_importance.png) | XGBoost top features |
+| [model_comparison.png](outputs/figures/model_comparison.png) | Model performance comparison |
+| [predicted_vs_actual.png](outputs/figures/predicted_vs_actual.png) | Predicted vs actual scatter plots |
+| [residual_plots.png](outputs/figures/residual_plots.png) | Residual analysis for all models |
+| [r_exploratory_plots.pdf](outputs/figures/r_exploratory_plots.pdf) | Exploratory plots from the R workflow |
 
 ---
 
